@@ -1,0 +1,113 @@
+:root {
+    --negro: hsl(0, 0%, 0%);
+    --verde: hsl(75, 94%, 57%);
+    --gris-black: hsl(0, 0%, 12%);
+    --gris: hsl(0,0%,20%);
+    --blanco: hsl(0,0%,100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--verde);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header {
+        margin: 15px;
+        color: var(--negro);
+    }
+
+    .calculadora {
+        background-color: var(--gris-black);
+        width: 30%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        color: var(--verde);
+        padding: 16px;
+        border-radius: 16px;
+        gap: 8px;
+
+        .pantalla {
+            grid-column: 1 / -1;
+            text-align: right;
+            background-color: var(--negro);
+            padding: 16px;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: monospace, sans-serif;
+            overflow-x: auto;
+        }
+
+        .btn {
+            padding: 16px 8px;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: var(--gris-black);
+            border: none;
+            cursor: pointer;
+            color: var(--verde);
+            margin: 8px;
+
+            &:hover {
+                background-color: var(--negro);
+            }
+        }
+
+        #igual {
+            grid-row: span 2;
+            background-color: var(--verde);
+            color: var(--negro);
+
+            &:hover {
+                background-color: hsla(75, 100%, 68%, 0.562);
+            }
+        }
+
+        #cero {
+            grid-column: span 2;
+        }
+    }
+    footer{
+        font-size: 20px;
+    }
+    // Media queries
+    @media only screen and (max-width: 992px) {
+        .header{
+            font-size: 12px;
+        }
+        .calculadora {
+            width: 40%;
+        }
+        footer{
+            font-size: 16px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .header{
+            font-size: 12px;
+        }
+        .calculadora {
+            width: 80%;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .header{
+            font-size: 12px;
+        }
+        .calculadora {
+            width: 95%;
+        }
+    }
+}
