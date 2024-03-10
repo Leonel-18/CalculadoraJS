@@ -62,6 +62,9 @@ body {
             &:hover {
                 background-color: var(--negro);
             }
+            &:active {
+                background-color: var(--negro);
+            }
         }
 
         #igual {
