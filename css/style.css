@@ -60,6 +60,9 @@ body .calculadora .btn {
 body .calculadora .btn:hover {
   background-color: var(--negro);
 }
+body .calculadora .btn:active {
+  background-color: var(--negro);
+}
 body .calculadora #igual {
   grid-row: span 2;
   background-color: var(--verde);
