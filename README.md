@@ -2,7 +2,7 @@
 
 #### Tecnologias Usadas
 - HTML
-- CSS
+- SCSS / CSS
 - JavaScript
 
 #### Live
